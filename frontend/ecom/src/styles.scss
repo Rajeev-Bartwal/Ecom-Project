@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "bootstrap/scss/bootstrap";
+
+@import "./assets/style/layout.scss";
+
+.ec_card {
+    border-radius: 16px !important;
+    padding: 20px;
+}
+
+.ec_item_card {
+    padding: 10px;
+    margin: 10px;
+    width: fit-content;
+    max-width: 400px;
+    display: inline !important;
+    border: black 1px solid;
+    border-radius: 16px !important;
+}

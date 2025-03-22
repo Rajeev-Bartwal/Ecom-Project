@@ -1,0 +1,10 @@
+$sidebar_width: 100px;
+
+.app-footer {
+    width: calc(100% - #{$sidebar_width});
+    position: absolute;
+    bottom: 0;
+    left: $sidebar_width;
+    background-color: red;
+    height: 60px !important;
+}

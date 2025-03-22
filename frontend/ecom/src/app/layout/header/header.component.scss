@@ -1,0 +1,16 @@
+$sidebar_width: 100px;
+
+.app_header {
+    // width: calc(100% - #{$sidebar_width});
+    width: 100% !important;
+    height: 60px !important;
+    background-color: antiquewhite;
+
+    position: fixed;
+    top: 0;
+    // left: $sidebar_width;
+}
+
+.app_header_navbar {
+    height: 100% !important;
+}
