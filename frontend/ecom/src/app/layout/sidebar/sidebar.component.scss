@@ -1,0 +1,10 @@
+$header_height: 60px;
+
+.app_sidebar {
+    width: 100px !important;
+    height: calc(100% - #{$header_height}) !important;
+    position: absolute !important;
+    top: $header_height;
+    left: 0;
+    background-color: aqua;
+}

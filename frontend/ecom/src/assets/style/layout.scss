@@ -1,0 +1,25 @@
+$header_height: 60px;
+$content_spacing: 40px;
+
+.page_container {
+    height: calc(100vh - #{$header_height * 2 + $content_spacing * 2}) !important;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.page_header {
+    height: 60px;
+    width: 100% !important;
+}
+
+.page_body {
+    flex: 1;
+    overflow: auto;
+
+}
+
+.page_footer {
+    height: 60px;
+    width: 100% !important;
+}
