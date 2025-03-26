@@ -4,10 +4,13 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -27,11 +30,21 @@ public class Product {
        private boolean  productAvailable;
        private int stockQuantity;
 
-       private String imageName;
-       private String imageType;
+       @OneToMany(mappedBy = "product" ,cascade = CascadeType.ALL,orphanRemoval = true,fetch = FetchType.LAZY)
+       private List<Image> images = new ArrayList<>();
 
-       @Lob
-       private byte[] imageData;
+       public void addImage(Image img){
+              images.add(img);
+              img.setProduct(this);
+       }
 
+       public  void setImages(List<Image> images){
+              this.images.clear();
+              images.forEach(this::addImage);
+       }
+
+       public boolean isProductAvailable() {
+              return productAvailable;
+       }
 
 }
