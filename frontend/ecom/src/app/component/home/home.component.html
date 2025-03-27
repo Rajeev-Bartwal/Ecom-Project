@@ -3,18 +3,20 @@
 
         <div class="ec_item_card_container">
 
-        <ng-container *ngFor="let data of dataJson">
-            <div class="ec_item_card">
-                <img [src]="data.imgUrl" class="data_img card-img-top p-2" alt="...">
-                <div class="card-body">
-                    <p> {{ data.name }}</p>
-                    <p class="card-text">
-                        {{ data.description }}
-                    </p>
+            <ng-container *ngFor="let data of dataJson">
+                <div class="ec_item_card">
+                    <div class="w-100 d-flex justify-content-center">
+                        <img [src]="data.imgUrl" class="data_img mx-auto card-img-top p-2" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <a [routerLink]="[data.id, 'details']"> {{ data.name }}</a>
+                        <p class="card-text">
+                            {{ data.description }}
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </ng-container>
-    </div>
+            </ng-container>
+        </div>
 
     </div>
 </div>
