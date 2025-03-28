@@ -2,7 +2,9 @@
 
 @import "bootstrap/scss/bootstrap";
 
+@import "./assets/style/variable.scss";
 @import "./assets/style/layout.scss";
+@import "./assets/style/header.scss";
 
 .ec_card {
     border-radius: 16px !important;

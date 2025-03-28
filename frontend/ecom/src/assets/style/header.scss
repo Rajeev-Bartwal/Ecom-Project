@@ -1,0 +1,13 @@
+.app_header {
+    // width: calc(100% - #{$sidebar_width});
+    width: 100% !important;
+    height: $header_height !important;
+    
+    top: 0;
+    position: fixed;
+}
+
+.app_header_navbar {
+    height: 100% !important;
+    padding-left: $sidebar_width;
+}

@@ -1,8 +1,27 @@
-$header_height: 60px;
-$content_spacing: 40px;
+.app_layout {
+    position: relative;
+    height: auto;
+    width: 100vw !important;
+    min-height: 100vh !important;
+    display: flex;
+    flex-flow: column;
+}
+
+.app_main_outer {
+    flex: 1;
+    // padding: 60px 0 60px 100px; /* includes footer */
+    padding: $header_height 0 0 $sidebar_width;
+}
+
+.app_main_inner {
+    padding: $content_spacing !important;
+    height: auto;
+    min-height: 100% !important;
+}
 
 .page_container {
-    height: calc(100vh - #{$header_height * 2 + $content_spacing * 2}) !important;
+    // height: calc(100vh - #{$header_height * 2 + $content_spacing * 2}) !important; /* includes footer height */
+    height: calc(100vh - #{$header_height + $content_spacing * 2}) !important;
 
     display: flex;
     flex-flow: column;
